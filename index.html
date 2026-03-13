@@ -1,93 +1,143 @@
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Jayson P. Cabigting</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Jayson P. Cabigting</h1>
+      <nav class="tabs" role="tablist" aria-label="Primary">
+        <button role="tab" aria-selected="true" aria-controls="panel-about" id="tab-about" class="tab">About</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-projects" id="tab-projects" class="tab">Projects</button>
+        <button role="tab" aria-selected="false" aria-controls="panel-contact" id="tab-contact" class="tab">Contact</button>
+      </nav>
+    </div>
+  </header>
 
-.project-card {
-  background: #f9f9f9;
-  border: 1px solid #eee;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: all 0.3s ease;
-}
+  <div class="hero" id="hero" style="background-image: url('bgphoto.jpg'); background-size: cover; background-position: center; height: 400px;">
+    <div class="hero-overlay"></div>
+  </div>
 
-.project-card:hover {
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
+  <main class="container">
+    <section id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="tab-panel">
+      <div class="about-grid">
+        <div class="avatar">
+          <img src="pfp.jfif" alt="Profile photo of Your Name">
+        </div>
 
-.project-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #333;
-}
+        <div class="about-content">
+          <h2>About me</h2>
+          <p class="lead">Hi — I'm Jayson, a Computer Science student who loves solving problems and creating software that works seamlessly. I enjoy learning new technologies and turning concepts into clean, functional code.</p>
 
-.project-card p {
-  margin-bottom: 0.5rem;
-  color: #666;
-  font-size: 0.95rem;
-}
+          <div class="meta">
+            <p><strong>Location:</strong> Angeles City, Pampanga, Philippines</p>
+            <p><strong>Role:</strong> Backend Developer</p>
+            <p><strong>Experience:</strong> Beginner developer focused on building a strong foundation and writing clean, readable code.</p>
+          </div>
 
-.tech-stack {
-  font-size: 0.875rem;
-  color: #888;
-}
+          <h3>Skills</h3>
+          <div class="skills" aria-hidden="false">
+            <span class="chip">HTML</span>
+            <span class="chip">CSS</span>
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">C</span>
+            <span class="chip">Java</span>
+          </div>
 
-/* Responsive for projects grid */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
+          <p class="cta">
+            <a class="btn" href="#contact">Get in touch</a>
+          </p>
+        </div>
+      </div>
+    </section>
 
-/* Projects Grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-}
+    <!-- Projects Section -->
+    <section id="panel-projects" role="tabpanel" aria-labelledby="tab-projects" class="tab-panel hidden">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <figure class="project">
+          <a href="project1.html">
+            <img src="project1.jpg" alt="Project 1">
+          </a>
+          <figcaption>Project 1</figcaption>
+        </figure>
 
-.project {
-  background: #f9f9f9;
-  border-radius: 8px;
-  overflow: hidden;
-  text-align: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        <figure class="project">
+          <a href="project2.html">
+            <img src="project2.jpg" alt="Project 2">
+          </a>
+          <figcaption>Project 2</figcaption>
+        </figure>
 
-.project img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  display: block;
-}
+        <figure class="project">
+          <a href="project3.html">
+            <img src="project3.jpg" alt="Project 3">
+          </a>
+          <figcaption>Project 3</figcaption>
+        </figure>
 
-.project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
-}
+        <figure class="project">
+          <a href="project4.html">
+            <img src="project4.jpg" alt="Project 4">
+          </a>
+          <figcaption>Project 4</figcaption>
+        </figure>
 
-.project figcaption {
-  padding: 1rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: #333;
-}
+        <figure class="project">
+          <a href="project5.html">
+            <img src="project5.jpg" alt="Project 5">
+          </a>
+          <figcaption>Project 5</figcaption>
+        </figure>
 
-/* Responsive tweak for projects */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
+        <figure class="project">
+          <a href="project6.html">
+            <img src="project6.jpg" alt="Project 6">
+          </a>
+          <figcaption>Project 6</figcaption>
+        </figure>
 
-@media (max-width: 480px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-}
+        <figure class="project">
+          <a href="project7.html">
+            <img src="project7.jpg" alt="Project 7">
+          </a>
+          <figcaption>Project 7</figcaption>
+        </figure>
+
+        <figure class="project">
+          <a href="project8.html">
+            <img src="project8.jpg" alt="Project 8">
+          </a>
+          <figcaption>Project 8</figcaption>
+        </figure>
+
+        <figure class="project">
+          <a href="project9.html">
+            <img src="project9.jpg" alt="Project 9">
+          </a>
+          <figcaption>Project 9</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="panel-contact" role="tabpanel" aria-labelledby="tab-contact" class="tab-panel hidden">
+      <h2>Contact</h2>
+      <p>If you’d like to get in touch, feel free to reach out via email or connect with me online:</p>
+      <p>Email: <a href="mailto:jaysoncabigting12@gmail.com">jaysoncabigting12@gmail.com</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Jayson P. Cabigting — Built with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
